@@ -28,5 +28,4 @@ trips <- trips %>% select(-c(start_lat, start_lng, end_lat, end_lng))
 View(trips)
 colnames(trips)
 
-
 trips <- trips %>% rename(ride_type= rideable_type , start_date_time= started_at, end_date_time= ended_at, customer_type= member_casual)
