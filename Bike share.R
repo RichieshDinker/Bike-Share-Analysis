@@ -1,8 +1,15 @@
+## Installing and Loading Packages
+
+install.packages('tidyverse')
 install.packages('janitor')
+install.packages('lubridate')
+install.packages('here')
+
 library(tidyverse)
 library(lubridate)
 library(here)
 library(janitor)
+
 getwd()
 
 trips_june21 <- read_csv('Extracted files/202106-divvy-tripdata.csv')
