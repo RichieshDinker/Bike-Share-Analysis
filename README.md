@@ -13,7 +13,7 @@ Should the marketing campaign be focussed on gaining new members or in convertin
 ### Key stakeholders
 Lily Moreno (Project Manager and Director of Marketing), Cyclistic marketing analytics team, Cyclistic executive team
 
-### R Code for Data Preparation, Processing and Analysis
+## R Code for Data Preparation, Processing and Analysis
 ### Installing and loading packages
 ```{r Installing and Loading Packages}
 install.packages('tidyverse')
