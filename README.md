@@ -16,8 +16,10 @@ Lily Moreno (Project Manager and Director of Marketing), Cyclistic marketing ana
 ## R Code for Data Preparation, Processing and Analysis
 
 ### Installing and Loading Packages
-install.packages('tidyverse')
 
+```{r Installing and Loading}
+install.packages('tidyverse')
+```
 install.packages('janitor')
 
 install.packages('lubridate')
