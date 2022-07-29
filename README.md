@@ -173,6 +173,6 @@ write.csv(ride_type_summary, "D:/Google Data Analytics Certification Learning/Ca
 ## Dashboard
 ![Bike share Analysis Dashboard](https://user-images.githubusercontent.com/107660678/181789279-dc2bb940-eeee-4395-b666-abf3442ab0dd.png)
 
-For proper Worksheet and dashboard experience, you can check my Tableau Public profile for the visualization -  [Click Here](https://public.tableau.com/app/profile/richiesh.dinker/viz/BikeShareAnalysisDashboardGoogleDataAnalyticsCapstone/BikeshareAnalysisDashboard)
+Note: For better Worksheet and dashboard experience, you can check my Tableau Public profile for the visualization -  [Click Here](https://public.tableau.com/app/profile/richiesh.dinker/viz/BikeShareAnalysisDashboardGoogleDataAnalyticsCapstone/BikeshareAnalysisDashboard)
 
 
