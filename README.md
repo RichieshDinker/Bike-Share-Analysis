@@ -17,22 +17,17 @@ Lily Moreno (Project Manager and Director of Marketing), Cyclistic marketing ana
 
 ### Installing and Loading Packages
 
-```{r Installing and Loading}
+```{r Installing and Loading Packages}
 install.packages('tidyverse')
-```
 install.packages('janitor')
-
 install.packages('lubridate')
-
 install.packages('here')
-
 library(tidyverse)
-
 library(lubridate)
-
 library(here)
-
 library(janitor)
+```
+
 
 ### Loading dataframes using read_csv function  
 trips_june21 <- read_csv('Extracted files/202106-divvy-tripdata.csv')
