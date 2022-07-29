@@ -42,15 +42,40 @@ trips_apr22 <- read_csv('Extracted files/202204-divvy-tripdata.csv')
 trips_may22 <- read_csv('Extracted files/202205-divvy-tripdata.csv')
 ```
 
-### Checking and comparing the column names in all dataframes
+### Checking Data and comparing the column names in all dataframes
 ```{r Checking and comparing Column names}
-colnames(trips)
+glimpse(trips_june21)
+str(trips_june21)
+glimpse(trips_july21)
+str(trips_july21)
+glimpse(trips_aug21)
+str(trips_aug21)
+glimpse(trips_sep21)
+str(trips_sep21)
+glimpse(trips_oct21)
+str(trips_oct21)
+glimpse(trips_nov21)
+str(trips_nov21)
+glimpse(trips_dec21)
+str(trips_dec21)
+glimpse(trips_jan22)
+str(trips_jan22)
+glimpse(trips_feb22)
+str(trips_feb22)
+glimpse(trips_mar22)
+str(trips_mar22)
+glimpse(trips_apr22)
+str(trips_apr22)
+glimpse(trips_may22)
+str(trips_may22)
+
 compare_df_cols(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22, return= "mismatch")
 ```
 
 ### Combining all dataframes together
 ```{r Binding dataframes}
 trips <- bind_rows(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22)
+colnames(trips)
 View(trips)
 ```
 
