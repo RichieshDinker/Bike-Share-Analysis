@@ -171,7 +171,7 @@ write.csv(ride_type_summary, "D:/Google Data Analytics Certification Learning/Ca
 ![Member Vs Casual](https://user-images.githubusercontent.com/107660678/181789242-e13af285-f575-4a1f-8233-5b6aff14c020.png)
 
 ## Dashboard
-![Bike share Analysis Dashboard](https://user-images.githubusercontent.com/107660678/181821329-f3246549-9991-453c-85ab-4a1153d291c0.png)
+![Bike share Analysis Dashboard](https://user-images.githubusercontent.com/107660678/181829197-9af8372a-a3ee-4ce0-b3d6-2702aadb1f96.png)
 
 Note: For better worksheet and dashboard experience, you can check my Tableau Public profile for the visualization -  [Click Here](https://public.tableau.com/app/profile/richiesh.dinker/viz/BikeShareAnalysisDashboardGoogleDataAnalyticsCapstone/BikeshareAnalysisDashboard)
 
@@ -183,6 +183,9 @@ The number of rides for annual members is more for almost three quarters (from S
 Also analysing number of rides weekly through the graph above, the number spikes up on weekends for casual riders whereas, there is a slight drop for annual members during weekends,  which makes sense considering the scenario thought of in the previous point.
 
 When it comes to bike type, classic bike is the obvous and the most prominent option for both annual aswell as casual users. Next comes the electic bike whereas docked bike is not at all the choice for annual members.  
+
+### Recommendations
+
 
 
 
