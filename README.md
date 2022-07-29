@@ -68,13 +68,18 @@ trips$trip_duration <- as.numeric(as.character(trips$trip_duration))
 
 ### Creating separate columns(day, month, year, weekday) from start_date_time column
 trips$date <- as.Date(trips$start_date_time)
+
 trips$day <- format((trips$date), "%d")
+
 trips$month <- format(trips$date, "%m")
+
 trips$year <- format(trips$date, "%Y")
+
 trips$weekday <- weekdays(trips$date)
 
 ### Cleaning Data
 trips_final <- trips %>% filter(trip_duration>0 & (end_date_time>start_date_time))
+
 trips_final1 <- trips_final[!duplicated(trips_final$ride_id),]
 
 View(trips_final1)
