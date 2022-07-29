@@ -15,7 +15,7 @@ Lily Moreno (Project Manager and Director of Marketing), Cyclistic marketing ana
 
 ## R Code for Data Preparation, Processing and Analysis
 
-### Installing and Loading Packages
+### Installing and loading packages
 
 ```{r Installing and Loading Packages}
 install.packages('tidyverse')
@@ -30,38 +30,27 @@ library(janitor)
 
 
 ### Loading dataframes using read_csv function  
+
+```{r Loading dataframes using read_csv function}
 trips_june21 <- read_csv('Extracted files/202106-divvy-tripdata.csv')
-
 trips_july21 <- read_csv('Extracted files/202107-divvy-tripdata.csv')
-
 trips_aug21 <- read_csv('Extracted files/202108-divvy-tripdata.csv')
-
 trips_sep21 <- read_csv('Extracted files/202109-divvy-tripdata.csv')
-
 trips_oct21 <- read_csv('Extracted files/202110-divvy-tripdata.csv')
-
 trips_nov21 <- read_csv('Extracted files/202111-divvy-tripdata.csv')
-
 trips_dec21 <- read_csv('Extracted files/202112-divvy-tripdata.csv')
-
 trips_jan22 <- read_csv('Extracted files/202201-divvy-tripdata.csv')
-
 trips_feb22 <- read_csv('Extracted files/202202-divvy-tripdata.csv')
-
 trips_mar22 <- read_csv('Extracted files/202203-divvy-tripdata.csv')
-
 trips_apr22 <- read_csv('Extracted files/202204-divvy-tripdata.csv')
-
 trips_may22 <- read_csv('Extracted files/202205-divvy-tripdata.csv')
+```
 
-
-### Checking the column names
+### Checking and comparing the column names in all dataframes
+```{r Checking and comparing Column names}
 colnames(trips)
-
-### Comparing if the columns in all dataframes are same
-compare_df_cols(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, 
-                trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22, return= "mismatch")
-
+compare_df_cols(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22, return= "mismatch")
+```
 ### Binding all dataframes together
 trips <- bind_rows(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, 
                    trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22)
