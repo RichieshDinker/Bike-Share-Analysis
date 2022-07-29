@@ -175,4 +175,10 @@ write.csv(ride_type_summary, "D:/Google Data Analytics Certification Learning/Ca
 
 Note: For better worksheet and dashboard experience, you can check my Tableau Public profile for the visualization -  [Click Here](https://public.tableau.com/app/profile/richiesh.dinker/viz/BikeShareAnalysisDashboardGoogleDataAnalyticsCapstone/BikeshareAnalysisDashboard)
 
+### Findings and Conclusion
+Out of the total number of Bike users, 56% are annual members whereas apprimately 44% are casual users, which is still a bigger number not subscribing for memberships.
+
+The nmber of rides for annual members is more for almost three quarters (from Sept 2021- May 2022) and only during the summer months of June, July and August, the number of rides is more for casual riders. These annual members might be chicagoians who are using the bikes for regular commutes to office. On the other hand, casual riders might be tourists using the services during summers. 
+
+
 
