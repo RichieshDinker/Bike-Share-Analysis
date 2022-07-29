@@ -151,17 +151,20 @@ summary(trips_final1)
 ### Grouping and Summarising data
 ```{r Summarizing data by month}
 ride_length_by_month <- trips_final1 %>% group_by(customer_type,month)%>% summarise(number_of_rides = n(),mean_ride_length = mean(trip_duration)) %>% arrange(month)
+write.csv(ride_length_by_month, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_length_by_month.csv", row.names= FALSE)
 ```
 ![Monthly Ride Count](https://user-images.githubusercontent.com/107660678/181787606-a966c7cf-fc2d-442d-8210-9e64044fe408.png)
 ![Monthly Ride Duration](https://user-images.githubusercontent.com/107660678/181789045-5ed9a858-d062-4361-9536-0e171bf29814.png)
 
 ```{r Summarizing data by week}
 ride_summary_by_week <- trips_final1 %>% group_by(weekday, customer_type) %>% summarise(number_of_rides = n(), mean_ride_length = mean(trip_duration))
+write.csv(ride_summary_by_week, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_summary_by_week.csv", row.names= FALSE)
 ```
 ![Weekly Ride Count](https://user-images.githubusercontent.com/107660678/181789106-615f98b3-ac33-43a4-90f3-96771f3ca45c.png)
 
 ```{r Ride Type}
 ride_type_summary <- trips_final1 %>% group_by(ride_type, customer_type) %>% summarise(number_of_rides = n()) 
+write.csv(ride_type_summary, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_type_summary.csv", row.names= FALSE)
 ```
 ![Ride Type Preference](https://user-images.githubusercontent.com/107660678/181789151-2685e36a-cbeb-41a2-b870-78fe5ee4b960.png)
 
@@ -171,9 +174,3 @@ ride_type_summary <- trips_final1 %>% group_by(ride_type, customer_type) %>% sum
 ![Bike share Analysis Dashboard](https://user-images.githubusercontent.com/107660678/181789279-dc2bb940-eeee-4395-b666-abf3442ab0dd.png)
 
 
-### Saving summarised data as a CSV file
-```{r Saving Data}
-write.csv(ride_length_by_month, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_length_by_month.csv", row.names= FALSE)
-write.csv(ride_summary_by_week, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_summary_by_week.csv", row.names= FALSE)
-write.csv(ride_type_summary, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_type_summary.csv", row.names= FALSE)
-```
