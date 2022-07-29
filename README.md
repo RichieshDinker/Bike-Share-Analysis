@@ -13,6 +13,9 @@ Should the marketing campaign be focussed on gaining new members or in convertin
 ### Key stakeholders
 Lily Moreno (Project Manager and Director of Marketing), Cyclistic marketing analytics team, Cyclistic executive team
 
+### Data Background
+The data has been made available by Motivate International Inc..The data is downloaded from this link [Cyclistic Dataset](https://divvy-tripdata.s3.amazonaws.com/index.html) for 12 month period (June 2021 - May 2022).
+
 ## R Code for Data Preparation, Processing and Analysis
 ### Installing and loading packages
 ```{r Installing and Loading Packages}
