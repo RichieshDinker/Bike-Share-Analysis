@@ -44,28 +44,51 @@ trips_may22 <- read_csv('Extracted files/202205-divvy-tripdata.csv')
 
 ### Checking Data and comparing the column names in all dataframes
 ```{r Checking and comparing Column names}
+summary(trips_june21)
 glimpse(trips_june21)
 str(trips_june21)
+
+summary(trips_july21)
 glimpse(trips_july21)
 str(trips_july21)
+
+summary(trips_aug21)
 glimpse(trips_aug21)
 str(trips_aug21)
+
+summary(trips_sep21)
 glimpse(trips_sep21)
 str(trips_sep21)
+
+summary(trips_oct21)
 glimpse(trips_oct21)
 str(trips_oct21)
+
+summary(trips_nov21)
 glimpse(trips_nov21)
 str(trips_nov21)
+
+summary(trips_dec21)
 glimpse(trips_dec21)
 str(trips_dec21)
+
+summary(trips_jan22)
 glimpse(trips_jan22)
 str(trips_jan22)
+
+summary(trips_feb22)
 glimpse(trips_feb22)
 str(trips_feb22)
+
+summary(trips_mar22)
 glimpse(trips_mar22)
 str(trips_mar22)
+
+summary(trips_apr22)
 glimpse(trips_apr22)
 str(trips_apr22)
+
+summary(trips_may22)
 glimpse(trips_may22)
 str(trips_may22)
 
@@ -115,7 +138,7 @@ trips_final1 <- trips_final[!duplicated(trips_final$ride_id),]
 View(trips_final1)
 ```
 
-### Checking the structure of the data and descriptive statistics
+### Checking the structure of the cleaned data
 ```{r Descriptive Statistics}
 glimpse(trips_final1)
 str(trips_final1)
