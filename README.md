@@ -1,8 +1,7 @@
 # Cyclistic-bike-share (Google Data Analytics Capstone Project)
 
 ## Scenario
-You are a junior data analyst working in the marketing analyst team at Cyclistic, a bike-share company in Chicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes 
-differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve your recommendations, so they must be backed up with compelling data insights and professional data visualizations.
+You are a junior data analyst working in the marketing analyst team at Cyclistic, a bike-share company in Chicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve your recommendations, so they must be backed up with compelling data insights and professional data visualizations.
 
 ### Introduction
 This is a case study on analysing bike usage pattern of different customer base of a company called 'Cyclistic'. Being the junior data analyst of the Cyclistic's marketing team, I am expected to answer key business questions and provide valuable insights and recommendations based on analysis.
@@ -18,27 +17,44 @@ Lily Moreno (Project Manager and Director of Marketing), Cyclistic marketing ana
 
 ### Installing and Loading Packages
 install.packages('tidyverse')
+
 install.packages('janitor')
+
 install.packages('lubridate')
+
 install.packages('here')
 
 library(tidyverse)
+
 library(lubridate)
+
 library(here)
+
 library(janitor)
 
 ### Loading dataframes using read_csv function  
 trips_june21 <- read_csv('Extracted files/202106-divvy-tripdata.csv')
+
 trips_july21 <- read_csv('Extracted files/202107-divvy-tripdata.csv')
+
 trips_aug21 <- read_csv('Extracted files/202108-divvy-tripdata.csv')
+
 trips_sep21 <- read_csv('Extracted files/202109-divvy-tripdata.csv')
+
 trips_oct21 <- read_csv('Extracted files/202110-divvy-tripdata.csv')
+
 trips_nov21 <- read_csv('Extracted files/202111-divvy-tripdata.csv')
+
 trips_dec21 <- read_csv('Extracted files/202112-divvy-tripdata.csv')
+
 trips_jan22 <- read_csv('Extracted files/202201-divvy-tripdata.csv')
+
 trips_feb22 <- read_csv('Extracted files/202202-divvy-tripdata.csv')
+
 trips_mar22 <- read_csv('Extracted files/202203-divvy-tripdata.csv')
+
 trips_apr22 <- read_csv('Extracted files/202204-divvy-tripdata.csv')
+
 trips_may22 <- read_csv('Extracted files/202205-divvy-tripdata.csv')
 
 
@@ -52,6 +68,7 @@ compare_df_cols(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct2
 ### Binding all dataframes together
 trips <- bind_rows(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, 
                    trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22)
+
 View(trips)
 
 ### Removing fields not needed for analysis
@@ -86,7 +103,9 @@ View(trips_final1)
 
 ### Checking the structure of the data and descriptive statistics
 glimpse(trips_final1)
+
 str(trips_final1)
+
 summary(trips_final1)
 
 ### Grouping and Summarising data
