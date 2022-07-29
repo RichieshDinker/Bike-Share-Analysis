@@ -61,6 +61,11 @@ trips_final1 <- trips_final[!duplicated(trips_final$ride_id),]
 
 View(trips_final1)
 
+## Checking the structure of the data and descriptive statistics
+glimpse(trips_final1)
+str(trips_final1)
+summary(trips_final1)
+
 ## Grouping and Summarising data
 ride_length_by_month <- trips_final1 %>% group_by(customer_type,month)%>% summarise(number_of_rides = n(),mean_ride_length = mean(trip_duration)) %>% arrange(month)
 
@@ -74,6 +79,8 @@ write.csv(ride_length_by_month, "D:/Google Data Analytics Certification Learning
 write.csv(ride_summary_by_week, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_summary_by_week.csv", row.names= FALSE)
 
 write.csv(ride_type_summary, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_type_summary.csv", row.names= FALSE)
+
+
 
 
 
