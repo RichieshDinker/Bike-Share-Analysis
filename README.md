@@ -1,6 +1,6 @@
-# Cyclistic-bike-share (Google Data Analytics Capstone Project)
+## Cyclistic-bike-share (Google Data Analytics Capstone Project)
 
-## Scenario
+### Scenario
 You are a junior data analyst working in the marketing analyst team at Cyclistic, a bike-share company in Chicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve your recommendations, so they must be backed up with compelling data insights and professional data visualizations.
 
 ### Introduction
@@ -13,10 +13,8 @@ Should the marketing campaign be focussed on gaining new members or in convertin
 ### Key stakeholders
 Lily Moreno (Project Manager and Director of Marketing), Cyclistic marketing analytics team, Cyclistic executive team
 
-## R Code for Data Preparation, Processing and Analysis
-
+### R Code for Data Preparation, Processing and Analysis
 ### Installing and loading packages
-
 ```{r Installing and Loading Packages}
 install.packages('tidyverse')
 install.packages('janitor')
@@ -28,9 +26,7 @@ library(here)
 library(janitor)
 ```
 
-
 ### Loading dataframes using read_csv function  
-
 ```{r Loading dataframes using read_csv function}
 trips_june21 <- read_csv('Extracted files/202106-divvy-tripdata.csv')
 trips_july21 <- read_csv('Extracted files/202107-divvy-tripdata.csv')
@@ -51,60 +47,66 @@ trips_may22 <- read_csv('Extracted files/202205-divvy-tripdata.csv')
 colnames(trips)
 compare_df_cols(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22, return= "mismatch")
 ```
-### Binding all dataframes together
-trips <- bind_rows(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, 
-                   trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22)
 
+### Combining all dataframes together
+```{r Binding dataframes}
+trips <- bind_rows(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22)
 View(trips)
+```
 
 ### Removing fields not needed for analysis
+```{r Removing Columns}
 trips <- trips %>% select(-c(start_lat, start_lng, end_lat, end_lng))
+```
 
 ### Renaming the fields
+```{r Renaming Columns}
 trips <- trips %>% rename(ride_type= rideable_type , start_date_time= started_at, end_date_time= ended_at, customer_type= member_casual)
+```
 
-### Adding a column trip_duration
+### Creating a column 'trip_duration'
+```{r Creating Column}
 trips$trip_duration <- difftime(trips$end_date_time, trips$start_date_time, units= "mins")
+```
 
-### Changing the datatype of trip_duration
+### Changing the datatype of 'trip_duration'
+```{r Changing datatype}
 trips$trip_duration <- as.numeric(as.character(trips$trip_duration))
+```
 
-### Creating separate columns(day, month, year, weekday) from start_date_time column
+### Creating separate columns(day, month, year, weekday) from 'start_date_time' column
+```{r Creating day, month, year, weekday columns}
 trips$date <- as.Date(trips$start_date_time)
-
 trips$day <- format((trips$date), "%d")
-
 trips$month <- format(trips$date, "%m")
-
 trips$year <- format(trips$date, "%Y")
-
 trips$weekday <- weekdays(trips$date)
+```
 
 ### Cleaning Data
+```{r Data Cleaning}
 trips_final <- trips %>% filter(trip_duration>0 & (end_date_time>start_date_time))
-
 trips_final1 <- trips_final[!duplicated(trips_final$ride_id),]
-
 View(trips_final1)
+```
 
 ### Checking the structure of the data and descriptive statistics
+```{r Descriptive Statistics}
 glimpse(trips_final1)
-
 str(trips_final1)
-
 summary(trips_final1)
+```
 
 ### Grouping and Summarising data
+```{r Summarizing Data}
 ride_length_by_month <- trips_final1 %>% group_by(customer_type,month)%>% summarise(number_of_rides = n(),mean_ride_length = mean(trip_duration)) %>% arrange(month)
-
 ride_summary_by_week <- trips_final1 %>% group_by(weekday, customer_type) %>% summarise(number_of_rides = n(), mean_ride_length = mean(trip_duration))
-
 ride_type_summary <- trips_final1 %>% group_by(ride_type, customer_type) %>% summarise(number_of_rides = n()) 
+```
 
 ### Saving summarised data as a CSV file
+```{r Saving Data}
 write.csv(ride_length_by_month, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_length_by_month.csv", row.names= FALSE)
-
 write.csv(ride_summary_by_week, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_summary_by_week.csv", row.names= FALSE)
-
 write.csv(ride_type_summary, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_type_summary.csv", row.names= FALSE)
-
+```
