@@ -180,6 +180,11 @@ Out of the total number of Bike users, 56% are annual members whereas apprimatel
 
 The number of rides for annual members is more for almost three quarters (from Sept 2021- May 2022) and only during the summer months of June, July and August, the number of rides is more for casual riders. These annual members might be chicagoians who are using the bikes for regular commutes to office. On the other hand, casual riders might be tourists using the services during summers. 
 
+Also analysing number of rides weekly through the graph above, the number spikes up on weekends for casual riders whereas, there is a slight drop for annual members during weekends,  which makes sense considering the scenario thought of in the previous point.
+
+When it comes to bike type, classic bike is the obvous and the most prominent option for both annual aswell as casual users. Next comes the electic bike whereas docked bike is not at all the choice for annual members.  
+
+
 
 
 
