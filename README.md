@@ -148,6 +148,7 @@ summary(trips_final1)
 ### Grouping and Summarising data
 ```{r Summarizing Data}
 ride_length_by_month <- trips_final1 %>% group_by(customer_type,month)%>% summarise(number_of_rides = n(),mean_ride_length = mean(trip_duration)) %>% arrange(month)
+(![Monthly Ride Count](https://user-images.githubusercontent.com/107660678/181787606-a966c7cf-fc2d-442d-8210-9e64044fe408.png))
 ride_summary_by_week <- trips_final1 %>% group_by(weekday, customer_type) %>% summarise(number_of_rides = n(), mean_ride_length = mean(trip_duration))
 ride_type_summary <- trips_final1 %>% group_by(ride_type, customer_type) %>% summarise(number_of_rides = n()) 
 ```
