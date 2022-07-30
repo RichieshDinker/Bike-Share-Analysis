@@ -173,7 +173,7 @@ write.csv(ride_type_summary, "D:/Google Data Analytics Certification Learning/Ca
 ## Dashboard
 ![Bike share Analysis Dashboard](https://user-images.githubusercontent.com/107660678/181829197-9af8372a-a3ee-4ce0-b3d6-2702aadb1f96.png)
 
-Note: For better worksheet and dashboard experience, check my Tableau Public profile for the visualization -  [Click Here](https://public.tableau.com/app/profile/richiesh.dinker/viz/BikeShareAnalysisDashboardGoogleDataAnalyticsCapstone/BikeshareAnalysisDashboard)
+Note: For better worksheet and dashboard experience, check my [Tableau Public profile](https://public.tableau.com/app/profile/richiesh.dinker/viz/BikeShareAnalysisDashboardGoogleDataAnalyticsCapstone/BikeshareAnalysisDashboard) for the visualization -  
 
 ### Findings and Conclusion
 Out of the total number of Bike users, 56% are annual members whereas apprimately 44% are casual users, which is still a bigger number not subscribing for memberships.
