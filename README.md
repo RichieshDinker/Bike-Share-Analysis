@@ -182,9 +182,15 @@ The number of rides for annual members is more for almost three quarters (from S
 
 Also analysing number of rides weekly through the graph above, the number spikes up on weekends for casual riders whereas, there is a slight drop for annual members during weekends,  which makes sense considering the scenario thought of in the previous point.
 
-When it comes to bike type, classic bike is the obvous and the most prominent option for both annual aswell as casual users. Next comes the electic bike whereas docked bike is not at all the choice for annual members.  
+When it comes to bike type, classic bike is the obvious and the most prominent option for both annual aswell as casual users. Next comes the electic bike whereas docked bike is not at all the choice for annual members.  
 
 ### Recommendations
+Since the casual user base of 'Cylistic' is huge (approx. 44%), the company should give promotional offers and heavy discounts to lure casual customers into using their products, focusing during September-May, particularly on the weekdays when the ride count is less.
+
+The marketing team can also give discounts based on the trip duration of minimum 20 mins to annual members. Now this will do two things. First, foster annual members of using their product more and the most importantly encourage casual members to register as annual members as they are anyways taking longer trips.
+
+Finally, docked bike is the least used bike among the lot. So, the company should work on their pricing strategy focussing on docked bikes. The company can reduce the hourly rental rates or can also introduce 'Decoy Pricing strategy' like in movie theatres, where the rates for longer trip duration is strategically kept less to promote longer usage of Docked bikes.
+
 
 
 
