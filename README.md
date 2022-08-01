@@ -95,12 +95,12 @@ summary(trips_may22)
 glimpse(trips_may22)
 str(trips_may22)
 
-compare_df_cols(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22, return= "mismatch")
+compare_df_cols(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, trips_feb22, trips_mar22, trips_apr22, trips_may22, return= "mismatch")
 ```
 
 ### Combining all dataframes together
 ```{r Binding dataframes}
-trips <- bind_rows(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, trips_feb22, trips_mar22, trips_apr22, trips_may22, trips_june22)
+trips <- bind_rows(trips_june21, trips_july21, trips_aug21, trips_sep21, trips_oct21, trips_nov21,trips_dec21, trips_jan22, trips_feb22, trips_mar22, trips_apr22, trips_may22)
 colnames(trips)
 View(trips)
 ```
