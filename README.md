@@ -154,24 +154,24 @@ ride_length_by_month <- trips_final1 %>% group_by(customer_type,month)%>% summar
 write.csv(ride_length_by_month, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_length_by_month.csv", row.names= FALSE)
 ```
 ![Monthly Ride Count](https://user-images.githubusercontent.com/107660678/181787606-a966c7cf-fc2d-442d-8210-9e64044fe408.png)
-![Monthly Ride Duration](https://user-images.githubusercontent.com/107660678/181789045-5ed9a858-d062-4361-9536-0e171bf29814.png)
+![Monthly Ride Durationn](https://user-images.githubusercontent.com/107660678/182278907-c451ebab-f929-4364-a425-0afd9ebfdbff.png)
 
 ```{r Summarizing data by week}
 ride_summary_by_week <- trips_final1 %>% group_by(weekday, customer_type) %>% summarise(number_of_rides = n(), mean_ride_length = mean(trip_duration))
 write.csv(ride_summary_by_week, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_summary_by_week.csv", row.names= FALSE)
 ```
-![Weekly Ride Count](https://user-images.githubusercontent.com/107660678/181789106-615f98b3-ac33-43a4-90f3-96771f3ca45c.png)
+![Weekly Ride Countt](https://user-images.githubusercontent.com/107660678/182278854-dd80f86f-5b91-4ece-9d0c-51c05989b790.png)
 
 ```{r Ride Type}
 ride_type_summary <- trips_final1 %>% group_by(ride_type, customer_type) %>% summarise(number_of_rides = n()) 
 write.csv(ride_type_summary, "D:/Google Data Analytics Certification Learning/Capstone- Bike share/Extracted files/ride_type_summary.csv", row.names= FALSE)
 ```
-![Ride Type Preference](https://user-images.githubusercontent.com/107660678/181789151-2685e36a-cbeb-41a2-b870-78fe5ee4b960.png)
+![Ride Type Preferencee](https://user-images.githubusercontent.com/107660678/182278795-777e4349-b4cb-46e0-960d-254222ebced4.png)
 
 ![Member Vs Casual](https://user-images.githubusercontent.com/107660678/181789242-e13af285-f575-4a1f-8233-5b6aff14c020.png)
 
 ## Dashboard
-![Bike share Analysis Dashboard](https://user-images.githubusercontent.com/107660678/181829197-9af8372a-a3ee-4ce0-b3d6-2702aadb1f96.png)
+![Bike share Analysis Dashboardd](https://user-images.githubusercontent.com/107660678/182278634-a670fb33-146a-43d2-b430-18cc247f4a76.png)
 
 Note: For better worksheet and dashboard experience, check my [Tableau Public profile](https://public.tableau.com/app/profile/richiesh.dinker/viz/BikeShareAnalysisDashboardGoogleDataAnalyticsCapstone/BikeshareAnalysisDashboard).  
 
